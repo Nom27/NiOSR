@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+
+<robot name="sensor" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:property name="sensor_name" value="imu" />
+    <xacro:property name="height1" value="1.2" />
+    <xacro:property name="height2" value="0.5" />
+    <xacro:property name="width" value="0.2" />
+    <xacro:property name="mass" value="1" />
+    <xacro:property name="axel_offset" value="0.05" />
+    <!-- Used for fixing robot to Gazebo 'base_link' -->
+    <link name="world"/>
+
+    <material name="blue">
+        <color rgba="0.0 0.0 0.8 1.0"/>
+    </material>
+
+    <material name="grey">
+        <color rgba="0.2 0.2 0.2 1.0"/>
+    </material>
+
+    <joint name="fixed" type="fixed">
+        <parent link="world"/>
+        <child link="link1"/>
+    </joint>
+
+    <!-- Base Link -->
+    <link name="link1">
+        <collision>
+            <origin xyz="0 0 ${height1/2}" rpy="0 0 0"/>
+            <geometry>
+                <box size="${width} ${width} ${height1}"/>
+            </geometry>
+        </collision>
+
+        <visual>
+            <origin xyz="0 0 ${height1/2}" rpy="0 0 0"/>
+            <geometry>
+                <box size="${width} ${width} ${height1}"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+
+        <inertial>
+            <origin xyz="0 0 ${height1/2}" rpy="0 0 0"/>
+            <mass value="${mass}"/>
+            <inertia
+            ixx="${mass / 12.0 * (width*width + height1*height1)}" ixy="0.0" ixz="0.0"
+            iyy="${mass / 12.0 * (height1*height1 + width*width)}" iyz="0.0"
+            izz="${mass / 12.0 * (width*width + width*width)}"/>
+        </inertial>
+    </link>
+
+    <joint name="joint1" type="continuous">
+        <parent link="link1"/>
+        <child link="link2"/>
+        <origin xyz="0 ${width} ${height1 - axel_offset}" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <dynamics damping="0.001"/>
+    </joint>
+
+    <!-- Middle Link -->
+    <link name="link2">
+        <collision>
+            <origin xyz="0 0 ${height2/2 - axel_offset}" rpy="0 0 0"/>
+            <geometry>
+                <box size="${width} ${width} ${height2}"/>
+            </geometry>
+        </collision>
+
+        <visual>
+            <origin xyz="0 0 ${height2/2 - axel_offset}" rpy="0 0 0"/>
+            <geometry>
+                <box size="${width} ${width} ${height2}"/>
+            </geometry>
+            <material name="grey"/>
+        </visual>
+
+        <inertial>
+            <origin xyz="0 0 ${height2/2 - axel_offset}" rpy="0 0 0"/>
+            <mass value="${mass}"/>
+            <inertia
+            ixx="${mass / 12.0 * (width*width + height2*height2)}" ixy="0.0" ixz="0.0"
+            iyy="${mass / 12.0 * (height2*height2 + width*width)}" iyz="0.0"
+            izz="${mass / 12.0 * (width*width + width*width)}"/>
+        </inertial>
+    </link>
+  
+    <!-- sensor Link -->
+    <link name="${sensor_name}_link">
+        <collision>
+            <origin xyz="0 0 ${height2+2*axel_offset - height2/5}" rpy="0 0 0"/>
+            <geometry>
+                <box size="${width} ${width} ${height2/5}"/>
+            </geometry>
+        </collision>
+
+        <visual>
+            <origin xyz="0 0 ${height2+2*axel_offset - height2/5}" rpy="0 0 0"/>
+            <geometry>
+                <box size="${width} ${width} ${height2/5}"/>
+            </geometry>
+            
+        </visual>
+
+        <inertial>
+            <origin xyz="0 0 1" rpy="0 0 0"/>
+            <mass value="1"/>
+            <inertia
+            ixx="1.0" ixy="0.0" ixz="0.0"
+            iyy="1.0" iyz="0.0"
+            izz="1.0"/>
+        </inertial>
+    </link>
+
+  
+    <joint name="joint2" type="fixed">
+        <parent link="link2"/>
+        <child link="${sensor_name}_link"/>
+    </joint>
+
+    <gazebo reference="link1">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <gazebo reference="link2">
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="${sensor_name}_link">
+        <sensor type = "imu" name="${sensor_name}_sensor">
+            <plugin name="imu_plugin" filename="libgazebo_ros_imu_sensor.so">
+                <ros>
+                    <namespace>/imu</namespace>
+                    <remapping>~/out:=data</remapping>
+                </ros>
+                <initial_orientation_as_reference>false</initial_orientation_as_reference>
+            </plugin>
+            <always_on>true</always_on>
+            <update_rate>100</update_rate>
+            <visualize>true</visualize>
+            <imu>
+                <angular_velocity>
+                    <x>
+                    <noise type="gaussian">
+                        <mean>0.0</mean>
+                        <stddev>2e-4</stddev>
+                        <bias_mean>0.0000075</bias_mean>
+                        <bias_stddev>0.0000008</bias_stddev>
+                    </noise>
+                    </x>
+                    <y>
+                    <noise type="gaussian">
+                        <mean>0.0</mean>
+                        <stddev>2e-4</stddev>
+                        <bias_mean>0.0000075</bias_mean>
+                        <bias_stddev>0.0000008</bias_stddev>
+                    </noise>
+                    </y>
+                    <z>
+                    <noise type="gaussian">
+                        <mean>0.0</mean>
+                        <stddev>2e-4</stddev>
+                        <bias_mean>0.0000075</bias_mean>
+                        <bias_stddev>0.0000008</bias_stddev>
+                    </noise>
+                    </z>
+                </angular_velocity>
+                <linear_acceleration>
+                    <x>
+                    <noise type="gaussian">
+                        <mean>0.0</mean>
+                        <stddev>1.7e-2</stddev>
+                        <bias_mean>0.1</bias_mean>
+                        <bias_stddev>0.001</bias_stddev>
+                    </noise>
+                    </x>
+                    <y>
+                    <noise type="gaussian">
+                        <mean>0.0</mean>
+                        <stddev>1.7e-2</stddev>
+                        <bias_mean>0.1</bias_mean>
+                        <bias_stddev>0.001</bias_stddev>
+                    </noise>
+                    </y>
+                    <z>
+                    <noise type="gaussian">
+                        <mean>0.0</mean>
+                        <stddev>1.7e-2</stddev>
+                        <bias_mean>0.1</bias_mean>
+                        <bias_stddev>0.001</bias_stddev>
+                    </noise>
+                    </z>
+                </linear_acceleration>
+            </imu>
+        </sensor>
+        <material>Gazebo/Orange</material>
+    </gazebo>
+
+</robot>
+

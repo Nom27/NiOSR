@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<robot name="sensor" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:property name="sensor_name" value="hokuyo" />
+    <xacro:property name="mass" value="0.1" />
+
+    <!-- Used for fixing robot to Gazebo 'base_link' -->
+    <link name="world"/>
+
+
+    <joint name="fixed" type="fixed">
+        <parent link="world"/>
+        <child link="${sensor_name}_link"/>
+        <origin xyz="0 0 0.1" rpy="0 0 0"/>
+    </joint>
+  
+    <!-- Hokuyo Link -->
+    <link name="${sensor_name}_link">
+        <collision>
+            <origin xyz="0 0 0.0" rpy="1.57 0 0"/>
+            <geometry>
+                <mesh filename="$(find sensors_demos_gazebo)/meshes/utm30.dae" scale="1 1 1"/>  
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0 0 0.0" rpy="1.57 0 0"/>
+            <geometry>
+                <mesh filename="$(find sensors_demos_gazebo)/meshes/utm30.dae" scale="1 1 1"/>  
+            </geometry>
+            <material name="orange"/>
+        </visual>
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="${mass}"/>
+            <inertia ixx="${mass}" ixy="0.0" ixz="0.0" iyy="${mass}" iyz="0.0" izz="${mass}"/>
+        </inertial>
+    </link>
+  
+    <material name="orange">
+        <color rgba="${255/255} ${108/255} ${10/255} 1.0"/>
+    </material>
+  
+    <gazebo reference="${sensor_name}_link">
+        <sensor type="ray" name="head_${sensor_name}_sensor">
+            <pose>0 0 0.05 0 0 0</pose>
+            <visualize>true</visualize>
+            <update_rate>40</update_rate>
+            <ray>
+                <scan>
+                    <horizontal>
+                        <samples>720</samples>
+                        <resolution>1</resolution>
+                        <min_angle>-1.570796</min_angle>
+                        <max_angle>1.570796</max_angle>
+                    </horizontal>
+                </scan>
+                <range>
+                    <min>0.10</min>
+                    <max>30.0</max>
+                    <resolution>0.01</resolution>
+                </range>
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.01</stddev>
+                </noise>
+            </ray>
+            <plugin name="gazebo_ros_head_${sensor_name}_controller" filename="libgazebo_ros_ray_sensor.so">
+                <ros>
+                    <namespace>/${sensor_name}</namespace>
+                    <remapping>~/out:=scan</remapping>
+                </ros>
+                <!-- <frame_name> ommited, will default to hokuo_link -->
+                <output_type>sensor_msgs/LaserScan</output_type>
+            </plugin>
+        </sensor>
+    </gazebo>
+</robot>
+

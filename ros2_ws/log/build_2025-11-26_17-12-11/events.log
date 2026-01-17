@@ -1,0 +1,271 @@
+[0.000000] (-) TimerEvent: {}
+[0.000164] (usb_cam) JobQueued: {'identifier': 'usb_cam', 'dependencies': OrderedDict()}
+[0.000207] (usb_cam) JobStarted: {'identifier': 'usb_cam'}
+[0.010199] (usb_cam) JobProgress: {'identifier': 'usb_cam', 'progress': 'cmake'}
+[0.010687] (usb_cam) Command: {'cmd': ['/usr/bin/cmake', '/home/student/ros2_ws/src/usb_cam', '-DCMAKE_INSTALL_PREFIX=/home/student/ros2_ws/install/usb_cam'], 'cwd': '/home/student/ros2_ws/build/usb_cam', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'student'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/student'), ('OLDPWD', '/home/student/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('SYSTEMD_EXEC_PID', '1452'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'student'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'student'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/m321:@/tmp/.ICE-unix/1425,unix/m321:/tmp/.ICE-unix/1425'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/788bf042_fe5f_4326_b0db_f5e808e5f89f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.118'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '18'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/student/ros2_ws/build/usb_cam'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099286] (-) TimerEvent: {}
+[0.199799] (-) TimerEvent: {}
+[0.300428] (-) TimerEvent: {}
+[0.365731] (usb_cam) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.400606] (-) TimerEvent: {}
+[0.500972] (-) TimerEvent: {}
+[0.586564] (usb_cam) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.599532] (usb_cam) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.601014] (-) TimerEvent: {}
+[0.675655] (usb_cam) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.683316] (usb_cam) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.683849] (usb_cam) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.684648] (usb_cam) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.688577] (usb_cam) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.701111] (-) TimerEvent: {}
+[0.772500] (usb_cam) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.779999] (usb_cam) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.780296] (usb_cam) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.780721] (usb_cam) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.783604] (usb_cam) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.12 (/opt/ros/humble/share/ament_cmake_auto/cmake)\n'}
+[0.801214] (-) TimerEvent: {}
+[0.901451] (-) TimerEvent: {}
+[0.931511] (usb_cam) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.001573] (-) TimerEvent: {}
+[1.101817] (-) TimerEvent: {}
+[1.202077] (-) TimerEvent: {}
+[1.204793] (usb_cam) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.211809] (usb_cam) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.223535] (usb_cam) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.243035] (usb_cam) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.263615] (usb_cam) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.302198] (-) TimerEvent: {}
+[1.323219] (usb_cam) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.326468] (usb_cam) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.402318] (-) TimerEvent: {}
+[1.420434] (usb_cam) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.447115] (usb_cam) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.486033] (usb_cam) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.497239] (usb_cam) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.502435] (-) TimerEvent: {}
+[1.581860] (usb_cam) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.582071] (usb_cam) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.602556] (-) TimerEvent: {}
+[1.657867] (usb_cam) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.659090] (usb_cam) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.702675] (-) TimerEvent: {}
+[1.802933] (-) TimerEvent: {}
+[1.903178] (-) TimerEvent: {}
+[1.936719] (usb_cam) StdoutLine: {'line': b'-- Found OpenCV: /usr (found version "4.5.4") \n'}
+[1.940557] (usb_cam) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") \n'}
+[1.941442] (usb_cam) StdoutLine: {'line': b"-- Checking for module 'libavcodec'\n"}
+[1.954106] (usb_cam) StdoutLine: {'line': b'--   Found libavcodec, version 58.134.100\n'}
+[1.984525] (usb_cam) StdoutLine: {'line': b"-- Checking for module 'libavutil'\n"}
+[1.995842] (usb_cam) StdoutLine: {'line': b'--   Found libavutil, version 56.70.100\n'}
+[2.003291] (-) TimerEvent: {}
+[2.024554] (usb_cam) StdoutLine: {'line': b"-- Checking for module 'libswscale'\n"}
+[2.037025] (usb_cam) StdoutLine: {'line': b'--   Found libswscale, version 5.9.100\n'}
+[2.072557] (usb_cam) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.102011] (usb_cam) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[2.103357] (-) TimerEvent: {}
+[2.108979] (usb_cam) StderrLine: {'line': b'\x1b[0mIn this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/usb_cam` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.\x1b[0m\n'}
+[2.114779] (usb_cam) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[2.120587] (usb_cam) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.120855] (usb_cam) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/student/ros2_ws/src/usb_cam/include\n'}
+[2.120951] (usb_cam) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.126358] (usb_cam) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[2.126452] (usb_cam) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[2.127564] (usb_cam) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[2.129381] (usb_cam) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.130615] (usb_cam) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[2.136759] (usb_cam) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[2.136902] (usb_cam) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[2.138240] (usb_cam) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.141737] (usb_cam) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.172597] (usb_cam) StdoutLine: {'line': b'-- Generating done\n'}
+[2.181539] (usb_cam) StdoutLine: {'line': b'-- Build files have been written to: /home/student/ros2_ws/build/usb_cam\n'}
+[2.192331] (usb_cam) CommandEnded: {'returncode': 0}
+[2.192885] (usb_cam) JobProgress: {'identifier': 'usb_cam', 'progress': 'build'}
+[2.194204] (usb_cam) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/student/ros2_ws/build/usb_cam', '--', '-j4', '-l4'], 'cwd': '/home/student/ros2_ws/build/usb_cam', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'student'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/student'), ('OLDPWD', '/home/student/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('SYSTEMD_EXEC_PID', '1452'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'student'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'student'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/m321:@/tmp/.ICE-unix/1425,unix/m321:/tmp/.ICE-unix/1425'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/788bf042_fe5f_4326_b0db_f5e808e5f89f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.118'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '18'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/student/ros2_ws/build/usb_cam'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[2.203486] (-) TimerEvent: {}
+[2.243567] (usb_cam) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[2.243718] (usb_cam) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object CMakeFiles/usb_cam_node_exe.dir/rclcpp_components/node_main_usb_cam_node_exe.cpp.o\x1b[0m\n'}
+[2.244542] (usb_cam) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[2.244692] (usb_cam) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/usb_cam.dir/src/usb_cam.cpp.o\x1b[0m\n'}
+[2.303578] (-) TimerEvent: {}
+[2.404240] (-) TimerEvent: {}
+[2.505297] (-) TimerEvent: {}
+[2.605615] (-) TimerEvent: {}
+[2.706024] (-) TimerEvent: {}
+[2.809047] (-) TimerEvent: {}
+[2.909306] (-) TimerEvent: {}
+[3.009570] (-) TimerEvent: {}
+[3.109841] (-) TimerEvent: {}
+[3.210457] (-) TimerEvent: {}
+[3.306595] (usb_cam) StdoutLine: {'line': b'[ 35%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[3.310559] (-) TimerEvent: {}
+[3.346879] (usb_cam) StdoutLine: {'line': b'[ 35%] Built target gtest_main\n'}
+[3.410657] (-) TimerEvent: {}
+[3.510943] (-) TimerEvent: {}
+[3.613944] (-) TimerEvent: {}
+[3.714185] (-) TimerEvent: {}
+[3.814458] (-) TimerEvent: {}
+[3.914774] (-) TimerEvent: {}
+[4.016951] (-) TimerEvent: {}
+[4.117200] (-) TimerEvent: {}
+[4.217437] (-) TimerEvent: {}
+[4.317715] (-) TimerEvent: {}
+[4.388006] (usb_cam) StdoutLine: {'line': b'[ 42%] \x1b[32m\x1b[1mLinking CXX shared library libusb_cam.so\x1b[0m\n'}
+[4.418329] (-) TimerEvent: {}
+[4.518592] (-) TimerEvent: {}
+[4.618880] (-) TimerEvent: {}
+[4.663456] (usb_cam) StdoutLine: {'line': b'[ 42%] Built target usb_cam\n'}
+[4.686210] (usb_cam) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/usb_cam_node.dir/src/usb_cam_node.cpp.o\x1b[0m\n'}
+[4.720810] (-) TimerEvent: {}
+[4.821074] (-) TimerEvent: {}
+[4.921946] (-) TimerEvent: {}
+[5.022211] (-) TimerEvent: {}
+[5.122553] (-) TimerEvent: {}
+[5.222950] (-) TimerEvent: {}
+[5.323224] (-) TimerEvent: {}
+[5.423557] (-) TimerEvent: {}
+[5.523793] (-) TimerEvent: {}
+[5.626394] (-) TimerEvent: {}
+[5.666100] (usb_cam) StdoutLine: {'line': b'[ 57%] \x1b[32m\x1b[1mLinking CXX executable usb_cam_node_exe\x1b[0m\n'}
+[5.701103] (usb_cam) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[5.726508] (-) TimerEvent: {}
+[5.767191] (usb_cam) StdoutLine: {'line': b'[ 64%] Built target gtest\n'}
+[5.789591] (usb_cam) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/test_pixel_formats.dir/test/test_pixel_formats.cpp.o\x1b[0m\n'}
+[5.790093] (usb_cam) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/test_usb_cam_utils.dir/test/test_usb_cam_utils.cpp.o\x1b[0m\n'}
+[5.826624] (-) TimerEvent: {}
+[5.928504] (-) TimerEvent: {}
+[6.028856] (-) TimerEvent: {}
+[6.076580] (usb_cam) StdoutLine: {'line': b'[ 78%] Built target usb_cam_node_exe\n'}
+[6.128945] (-) TimerEvent: {}
+[6.229315] (-) TimerEvent: {}
+[6.329662] (-) TimerEvent: {}
+[6.429937] (-) TimerEvent: {}
+[6.530220] (-) TimerEvent: {}
+[6.630557] (-) TimerEvent: {}
+[6.732592] (-) TimerEvent: {}
+[6.832858] (-) TimerEvent: {}
+[6.933138] (-) TimerEvent: {}
+[7.033404] (-) TimerEvent: {}
+[7.133688] (-) TimerEvent: {}
+[7.210630] (usb_cam) StdoutLine: {'line': b'[ 85%] \x1b[32m\x1b[1mLinking CXX executable test_usb_cam_utils\x1b[0m\n'}
+[7.233958] (-) TimerEvent: {}
+[7.334257] (-) TimerEvent: {}
+[7.434574] (-) TimerEvent: {}
+[7.521856] (usb_cam) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking CXX executable test_pixel_formats\x1b[0m\n'}
+[7.522098] (usb_cam) StdoutLine: {'line': b'[ 92%] Built target test_usb_cam_utils\n'}
+[7.534693] (-) TimerEvent: {}
+[7.634976] (-) TimerEvent: {}
+[7.735266] (-) TimerEvent: {}
+[7.789413] (usb_cam) StdoutLine: {'line': b'[ 92%] Built target test_pixel_formats\n'}
+[7.835393] (-) TimerEvent: {}
+[7.935653] (-) TimerEvent: {}
+[8.035917] (-) TimerEvent: {}
+[8.136172] (-) TimerEvent: {}
+[8.236385] (-) TimerEvent: {}
+[8.336652] (-) TimerEvent: {}
+[8.436920] (-) TimerEvent: {}
+[8.537178] (-) TimerEvent: {}
+[8.637433] (-) TimerEvent: {}
+[8.737690] (-) TimerEvent: {}
+[8.837950] (-) TimerEvent: {}
+[8.938228] (-) TimerEvent: {}
+[9.038483] (-) TimerEvent: {}
+[9.138761] (-) TimerEvent: {}
+[9.239111] (-) TimerEvent: {}
+[9.339397] (-) TimerEvent: {}
+[9.439659] (-) TimerEvent: {}
+[9.539924] (-) TimerEvent: {}
+[9.640161] (-) TimerEvent: {}
+[9.740432] (-) TimerEvent: {}
+[9.840703] (-) TimerEvent: {}
+[9.940966] (-) TimerEvent: {}
+[10.041189] (-) TimerEvent: {}
+[10.141482] (-) TimerEvent: {}
+[10.241740] (-) TimerEvent: {}
+[10.342001] (-) TimerEvent: {}
+[10.442252] (-) TimerEvent: {}
+[10.542505] (-) TimerEvent: {}
+[10.642760] (-) TimerEvent: {}
+[10.743019] (-) TimerEvent: {}
+[10.843273] (-) TimerEvent: {}
+[10.943522] (-) TimerEvent: {}
+[11.043775] (-) TimerEvent: {}
+[11.144039] (-) TimerEvent: {}
+[11.244292] (-) TimerEvent: {}
+[11.344544] (-) TimerEvent: {}
+[11.444801] (-) TimerEvent: {}
+[11.545077] (-) TimerEvent: {}
+[11.645332] (-) TimerEvent: {}
+[11.745598] (-) TimerEvent: {}
+[11.845853] (-) TimerEvent: {}
+[11.946083] (-) TimerEvent: {}
+[12.046347] (-) TimerEvent: {}
+[12.146615] (-) TimerEvent: {}
+[12.246905] (-) TimerEvent: {}
+[12.299280] (usb_cam) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libusb_cam_node.so\x1b[0m\n'}
+[12.347007] (-) TimerEvent: {}
+[12.447292] (-) TimerEvent: {}
+[12.547575] (-) TimerEvent: {}
+[12.647843] (-) TimerEvent: {}
+[12.741566] (usb_cam) StdoutLine: {'line': b'[100%] Built target usb_cam_node\n'}
+[12.747993] (-) TimerEvent: {}
+[12.752808] (usb_cam) CommandEnded: {'returncode': 0}
+[12.753743] (usb_cam) JobProgress: {'identifier': 'usb_cam', 'progress': 'install'}
+[12.762233] (usb_cam) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/student/ros2_ws/build/usb_cam'], 'cwd': '/home/student/ros2_ws/build/usb_cam', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'student'), ('LC_TIME', 'pl_PL.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/student'), ('OLDPWD', '/home/student/ros2_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'pl_PL.UTF-8'), ('SYSTEMD_EXEC_PID', '1452'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'student'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'student'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/m321:@/tmp/.ICE-unix/1425,unix/m321:/tmp/.ICE-unix/1425'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'pl_PL.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/788bf042_fe5f_4326_b0db_f5e808e5f89f'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'pl_PL.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.118'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '18'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'pl_PL.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'pl_PL.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'pl_PL.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/student/ros2_ws/build/usb_cam'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'pl_PL.UTF-8'), ('LC_PAPER', 'pl_PL.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[12.769222] (usb_cam) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[12.769456] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/environment/library_path.sh\n'}
+[12.769632] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/environment/library_path.dsv\n'}
+[12.769773] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/lib/usb_cam/usb_cam_node_exe\n'}
+[12.770400] (usb_cam) StdoutLine: {'line': b'-- Set runtime path of "/home/student/ros2_ws/install/usb_cam/lib/usb_cam/usb_cam_node_exe" to ""\n'}
+[12.770492] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/lib/usb_cam/show_image.py\n'}
+[12.770648] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/lib/libusb_cam.so\n'}
+[12.771342] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/lib/libusb_cam_node.so\n'}
+[12.774815] (usb_cam) StdoutLine: {'line': b'-- Set runtime path of "/home/student/ros2_ws/install/usb_cam/lib/libusb_cam_node.so" to ""\n'}
+[12.774964] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/include\n'}
+[12.775078] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/include/usb_cam\n'}
+[12.775164] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/include/usb_cam/conversions.hpp\n'}
+[12.775228] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/include/usb_cam/usb_cam_node.hpp\n'}
+[12.775353] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/include/usb_cam/utils.hpp\n'}
+[12.775440] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/include/usb_cam/usb_cam.hpp\n'}
+[12.775581] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/include/usb_cam/constants.hpp\n'}
+[12.775673] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/include/usb_cam/formats\n'}
+[12.775740] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/include/usb_cam/formats/mjpeg.hpp\n'}
+[12.775845] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/include/usb_cam/formats/utils.hpp\n'}
+[12.775940] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/include/usb_cam/formats/yuyv.hpp\n'}
+[12.776040] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/include/usb_cam/formats/pixel_format_base.hpp\n'}
+[12.776097] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/include/usb_cam/formats/mono.hpp\n'}
+[12.776220] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/include/usb_cam/formats/av_pixel_format_helper.hpp\n'}
+[12.776300] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/include/usb_cam/formats/m420.hpp\n'}
+[12.776379] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/include/usb_cam/formats/rgb.hpp\n'}
+[12.776477] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/include/usb_cam/formats/uyvy.hpp\n'}
+[12.776790] (usb_cam) StdoutLine: {'line': b'-- Up-to-date: /home/student/ros2_ws/install/usb_cam/lib/libusb_cam_node.so\n'}
+[12.777070] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/launch\n'}
+[12.777223] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/launch/__init__.py\n'}
+[12.777370] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/launch/camera.launch.py\n'}
+[12.777475] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/launch/camera_config.py\n'}
+[12.777541] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/config\n'}
+[12.777628] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/config/params_1.yaml\n'}
+[12.777692] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/config/params_2.yaml\n'}
+[12.777773] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/config/camera_info.yaml\n'}
+[12.777855] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/ament_index/resource_index/package_run_dependencies/usb_cam\n'}
+[12.778072] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/ament_index/resource_index/parent_prefix_path/usb_cam\n'}
+[12.778247] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/environment/ament_prefix_path.sh\n'}
+[12.778343] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/environment/ament_prefix_path.dsv\n'}
+[12.778477] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/environment/path.sh\n'}
+[12.778659] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/environment/path.dsv\n'}
+[12.778780] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/local_setup.bash\n'}
+[12.778871] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/local_setup.sh\n'}
+[12.778996] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/local_setup.zsh\n'}
+[12.779113] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/local_setup.dsv\n'}
+[12.779235] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/package.dsv\n'}
+[12.779430] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/ament_index/resource_index/packages/usb_cam\n'}
+[12.779569] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/ament_index/resource_index/rclcpp_components/usb_cam\n'}
+[12.779721] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[12.779855] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[12.780013] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[12.780135] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/cmake/usb_camConfig.cmake\n'}
+[12.780229] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/cmake/usb_camConfig-version.cmake\n'}
+[12.780325] (usb_cam) StdoutLine: {'line': b'-- Installing: /home/student/ros2_ws/install/usb_cam/share/usb_cam/package.xml\n'}
+[12.782029] (usb_cam) CommandEnded: {'returncode': 0}
+[12.807657] (usb_cam) JobEnded: {'identifier': 'usb_cam', 'rc': 0}
+[12.808187] (-) EventReactorShutdown: {}

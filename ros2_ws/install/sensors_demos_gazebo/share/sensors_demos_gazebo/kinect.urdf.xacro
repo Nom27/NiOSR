@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+
+<robot name="sensor" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:property name="sensor_name" value="kinect" />
+    <xacro:property name="height1" value="1.2" />
+    <xacro:property name="height2" value="0.5" />
+    <xacro:property name="width" value="0.2" />
+    <xacro:property name="mass" value="0.1" />
+    <!-- Used for fixing robot to Gazebo 'base_link' -->
+    <link name="world"/>
+
+
+    <joint name="fixed" type="fixed">
+        <parent link="world"/>
+        <child link="${sensor_name}_link"/>
+        <origin xyz="0 0 0.1" rpy="0 0 0"/>
+    </joint>
+  
+    <!-- Kinect Link -->
+    <link name="${sensor_name}_link">
+        <collision>
+            <origin xyz="0 0 0.1" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="$(find sensors_demos_gazebo)/meshes/kinect.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+
+        <visual>
+            <origin xyz="0 0 0.1" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="$(find sensors_demos_gazebo)/meshes/kinect.dae" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="orange"/>
+        </visual>
+
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="${mass}"/>
+            <inertia ixx="${mass}" ixy="0.0" ixz="0.0" iyy="${mass}" iyz="0.0" izz="${mass}"/>
+        </inertial>
+    </link>
+  
+    <link name="${sensor_name}_optical_link">
+    <!--<visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.01 0.01 0.01"/>
+            </geometry>
+            <material name="orange"/>
+        </visual>-->
+    </link>
+  
+    <joint name="optical_joint" type="fixed">
+        <parent link="${sensor_name}_link"/>
+        <child link="${sensor_name}_optical_link"/>
+        <origin xyz="0.01 0 0.15" rpy="0.0 0 0"/>
+    </joint>
+  
+    <material name="orange">
+        <color rgba="${255/255} ${108/255} ${10/255} 1.0"/>
+    </material>
+    <gazebo reference="${sensor_name}_optical_link">
+        <sensor type="depth" name="${sensor_name}_depth_sensor">
+            <always_on>0</always_on>
+            <update_rate>1</update_rate>
+            <camera name="${sensor_name}">
+                <horizontal_fov> ${91.2*3.14/180} </horizontal_fov>
+                <vertical_fov> ${65.5*3.14/180} </vertical_fov>
+                <diagonal_fov> ${100.6*3.14/180} </diagonal_fov>
+                <image>
+                    
+                    <format>B8G8R8</format>
+                    <width>640</width>
+                    <height>480</height>
+                </image>
+                <clip>
+                    <near>0.05</near>
+                    <far>4.0</far>
+                </clip>
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.0</mean>
+                    <stddev>0.005</stddev>
+                </noise>
+            </camera>
+            <plugin name="${sensor_name}_frame_controller" filename="libgazebo_ros_camera.so">
+                  <ros>
+              <!-- <namespace>custom_ns</namespace>-->
+              <remapping>${sensor_name}/image_raw:=${sensor_name}/color/image_raw</remapping>
+              <remapping>${sensor_name}/camera_info:=${sensor_name}/color/camera_info</remapping>
+              <remapping>${sensor_name}/depth/image_raw:=${sensor_name}/depth/image_rect_raw</remapping>
+              <remapping>${sensor_name}/depth/camera_info:=${sensor_name}/depth/camera_info</remapping>
+              <remapping>${sensor_name}/points:=${sensor_name}/depth_registered/points</remapping>
+            </ros>
+
+      <camera_name>${sensor_name}</camera_name>
+      <!-- <frame_name> ommited, will default to hokuo_link -->
+      <hack_baseline>0</hack_baseline>
+      <min_depth>0.001</min_depth>
+            </plugin>
+	    </sensor>
+	</gazebo>
+</robot>
+

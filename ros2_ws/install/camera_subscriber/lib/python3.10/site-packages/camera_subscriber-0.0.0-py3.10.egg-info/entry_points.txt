@@ -1,0 +1,5 @@
+[console_scripts]
+camera_node = camera_subscriber.camera_node:main
+point_to_cmd_vel = camera_subscriber.point_to_cmd_vel:main
+turtlebot_rotate = camera_subscriber.turtlebot_rotate:main
+
